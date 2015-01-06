@@ -1,13 +1,14 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="gb2312">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Learning by lmfyy</title>
+    <title>4G专业学习资源</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="javascripts/scale.fix.js"></script>
+	<script language="javascript" src="javascripts/index.iframe.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!--[if lt IE 9]>
@@ -17,7 +18,7 @@
   <body>
     <div class="wrapper">
       <header class="without-description">
-        <h1>Learning</h1>
+        <h1>4G移动商务专业学习资源</h1>
         <p></p>
         <p class="view"><a href="https://github.com/lmfyy/learning">View the Project on GitHub <small>lmfyy/learning</small></a></p>
         <ul>
@@ -26,8 +27,16 @@
           <li><a href="https://github.com/lmfyy/learning">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
-      <section>
-        <div>姹熸箹闄╂伓</div>
+
+	  <div align="center" class="index-dh">
+	    <a href="pages-html/main.html" target="mainFrame" class="index-dh-a"><div class="index-dh-div">网页设计</div></a>
+		<a href="pages_android/main.html" target="mainFrame" class="index-dh-a"><div class="index-dh-div">Android</div></a>
+	  </div>
+	  
+      <section id="body-section">
+        <div>
+		  <iframe id="mainFrame" name="mainFrame" src="index_main.html" class="index-iframe" scrolling="auto"></iframe>
+		</div>
       </section>
     </div>
     <footer>

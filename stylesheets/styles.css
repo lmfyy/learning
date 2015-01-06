@@ -1,4 +1,66 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+/**************************************************************************************
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);  
+这是网页加载时应用google字库内的字体。问题是google被墙，所有有此行网页打开非常慢。
+解决办法是，如果非要用这个字体，先下载字体文件放入站点目录中，然后使用@font-face来加载
+**************************************************************************************/
+
+/*应用本地字体文件*/
+@font-face{
+  font-family:Lato;
+  src: url("../fonts/Lato/Lato-Italic.ttf");
+  font-family:fzxbs;
+  src: url("../fonts/fzxbs.ttf");
+  font-family:lxt;
+  src: url("../fonts/fzlxtjt.ttf");
+}
+
+/*首页导航层*/
+.index-dh{
+  font-size: 15px;
+  background:#fafafa;
+  border-bottom:solid #DDDDDD 1px;
+  padding-top:10px;
+}
+
+/*首页导区块-仿按钮外形*/
+.index-dh-div{
+width:74px;
+height:34px;
+background: #F7F7F7;
+/*background: -webkit-linear-gradient(#FFFFFF,#F7F7F7 8px);  此行设置按钮背景颜色渐变效果*/
+border: solid #E7E7E7 1px;
+border-radius:8px 8px 0 0; /*设置上方为圆角*/
+border-bottom:none;
+line-height:2.2;           /*用行高来使文字纵向居中*/
+display: inline-table;     /*如果没有此行，DIV则默认纵向排列*/
+}
+
+/*首页导区块-超链接*/
+.index-dh-a{
+color: #666666;
+
+}
+
+/*首页内联框架*/
+.index-iframe{
+border:solid 1px #DDDDDD;
+border-top:none;
+width:100%;
+height:486px;
+}
+
+/*首页内联框架首页*/
+.index-main{
+text-align:center;
+font-family:lxt;
+font-size:28px;
+line-height:16;
+color:#333333;
+background:url(../images/index_main_bg.png);
+width:638px;
+height:486px;
+}
+
 html {
   background: #6C7989;
   background: #6c7989 -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6c7989), color-stop(100%, #434b55)) fixed;
@@ -71,10 +133,11 @@ header {
 header h1 {
   margin: 0;
   padding: 0;
+  font-family:fzxbs;
   font-size: 24px;
   line-height: 1.2;
   color: #069;
-  text-shadow: rgba(255, 255, 255, 0.9) 0 1px 0;
+  text-shadow:1px 1px 3px #BBBBBB;
 }
 header.without-description h1 {
   margin: 10px 0;
@@ -175,9 +238,9 @@ header ul a strong {
 }
 
 section {
-  padding: 15px 20px;
+  padding: 0px 2px 20px 0px; /*iFrame框架外层标签-定义内部填充：上 右 下 左*/
   font-size: 15px;
-  border-top: 1px solid #fff;
+  /*border-top: 1px solid #fff;*/
   background: -webkit-gradient(linear, 50% 0%, 50% 700, color-stop(0%, #fafafa), color-stop(100%, #dedede));
   background: -webkit-linear-gradient(#fafafa, #dedede 700px);
   background: -moz-linear-gradient(#fafafa, #dedede 700px);
